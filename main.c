@@ -14,7 +14,6 @@ void inicializaFita(char fita[TAM]){//coloca o simbolo inicial no inicio da fita
     fita[TAM]='\0';
     for(i=strlen(fita);i<TAM;i++)fita[i]=ESP;
 }
-void inserirTuplas(char transicoes[TAM][8],int *qtdTra,char estIni[2],char estFin[TAM][2],int *qtdFin);
 int main(){
     char transicoes[TAM][8],estIni[2],estAtual[2],estFin[TAM][2],fita[TAM];
     int cabeca,i,qtdTra=0,qtdFin=0,op=1,flag;
@@ -23,7 +22,6 @@ int main(){
     inserirTuplas(transicoes,&qtdTra,estIni,estFin,&qtdFin);
     while(op==1){//permite verificar várias strings para a mesma máquina de turing
         strcpy(estAtual,estIni);
-        cabeca=2;
         system("cls");
         printf("String: ");
         scanf("%s",fita);
